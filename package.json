@@ -1,0 +1,24 @@
+{
+  "name": "1-bdc-service-example",
+  "version": "1.0.0",
+  "description": "В данном репозитории размещен пример сервиса, который общается сам со своей копией, но имеет конфигурации при запуске (env) и обращается к разным базам данных в postgres",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmoreva/1-bdc-service-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmoreva/1-bdc-service-example/issues"
+  },
+  "homepage": "https://github.com/gmoreva/1-bdc-service-example#readme",
+  "dependencies": {
+    "axios": "0.21.1",
+    "express": "4.17.1",
+    "pg": "8.5.1"
+  }
+}
