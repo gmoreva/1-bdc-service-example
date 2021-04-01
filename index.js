@@ -8,6 +8,9 @@ if (!otherServiceUrl) {
   console.log('other service is not set')
   process.exit()
 }
+const cors = require('cors');
+app.use(cors());
+app.options('*', cors());
 
 const handleReq = async () => {
   const last = await client.query('select i from mytable order by i desc limit 1')
@@ -34,6 +37,7 @@ const run = async () => {
 
   app.get('/get-increment-from-service', async (req, res) => {
     const { data } = await axios.get(otherServiceUrl+ '/get-increment')
+    console.log(data)
     res.send(data)
   })
 
