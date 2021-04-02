@@ -41,6 +41,11 @@ const run = async () => {
     res.send(data)
   })
 
+  app.get('/set-increment-on-service', async (req, res) => {
+    const { data } = await axios.get(otherServiceUrl+ '/set-increment')
+    res.send(data)
+  })
+
   app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
   })
