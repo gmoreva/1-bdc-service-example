@@ -4,10 +4,6 @@ const port = process.env.PORT || 3000
 const axios = require('axios')
 const client = require('./client')
 const otherServiceUrl = process.env.OTHER_SERVICE
-if (!otherServiceUrl) {
-  console.log('other service is not set')
-  process.exit()
-}
 const cors = require('cors');
 app.use(cors());
 app.options('*', cors());
